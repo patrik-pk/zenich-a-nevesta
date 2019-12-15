@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="cs" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="">
+    <link rel="stylesheet" href="./css/_global/styles.css">
+    <link rel="stylesheet" href="./css/services/services.css">
+    <title>Ženich & Nevěsta | Služby</title>
+  </head>
+  <body class="services">
+
+    <!-- POP-UP -->
+
+    <div class="pop-up">
+        <p>Upozornění: Tato stránka slouží pouze jako školní projekt.</p>
+        <button id="pop-up_close">Ok</button>
+    </div>
+
+    <!-- HEADER -->
+
+    <?php $header_id = "services_header"; $minor_heading = "Naše služby"; include './includes/minor_header.php'; ?>
+
+    <!-- SIDE NAV -->
+
+    <nav class="position_navigation">
+      <div class="nav_container">
+        <ul>
+          <li><img src="./img/icons/services_nav/up_black.png" alt=""></li>
+          <li><img src="./img/icons/services_nav/location_black.png" alt=""></li>
+          <li><img src="./img/icons/services_nav/decoration_black.png" alt=""></li>
+          <li><img src="./img/icons/services_nav/food_black.png" alt=""></li>
+          <li><img src="./img/icons/services_nav/camera_black.png" alt=""></li>
+          <li><img src="./img/icons/services_nav/addition_black.png" alt=""></li>
+          <li><img src="./img/icons/services_nav/down_black.png" alt=""></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- SECTION -->
+    
+
+    <!-- Locations -->
+    <section class="services_section locations_section">
+
+      <h2 class="middle_heading">Lokality</h2>
+
+      <ul id="locations">
+
+        <!-- Lednice -->
+        <li class="loc">
+
+          <!-- left -->
+          <div id="loc_left">
+            <h3 id="ll_title" class="mini_heading">Zámek Lednice</h3>
+            <div id="ll_text" class="text">
+
+              <p><span class="bold_span">Kapacita: </span> 120 osob</p>
+
+              <div id="sublocations">
+                <span class="bold_span">Prostory:</span>
+                <span id="sub_holder"> Čestné nádvoří<span id="sub_content"><img src="./img/services/lednice/cestne_nadvori.JPG" alt=""></span></span>,
+                <span id="sub_holder"> Rytířský sál<span id="sub_content"><img src="./img/services/lednice/rytirsky_sal.jpg" alt=""></span></span>,
+                <span id="sub_holder"> Lovecký sál<span id="sub_content"><img src="./img/services/lednice/lovecky_sal.jpg" alt=""></span></span>,
+                <span id="sub_holder"> Vstupní hala<span id="sub_content"><img src="./img/services/lednice/vstupni_hala.jpg" alt=""></span></span>
+              </div>
+
+              <div id="pricelist">
+                <span class="bold_span">Ceník:</span>
+                <ul>
+                  <li>LL/01 - Zámek - hodina mimo otevírací dobu zámku - 11.000 Kč</li>
+                  <li>LL/02 - Zámek - v provozních hodinách zámku - 24.000 Kč</li>
+                  <li>LL/03 - Zámek - celý den - 120.000 Kč</li>
+                  <li>LL/04 - Park - za hodinu - 1.300 Kč</li>
+                  <li>LL/05 - Park - za celý den - 26.000 Kč</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- right -->
+          <div id="loc_right">
+            <img src="./img/services/lednice/lednice.JPG" alt="">
+          </div>
+
+        </li> <!-- end of Lednice -->
+
+
+        <!-- Valtice -->
+        <li class="loc">
+
+          <!-- left -->
+          <div id="loc_left">
+            <h3 id="ll_title" class="mini_heading">Zámek Valtice</h3>
+            <div id="ll_text" class="text">
+
+              <p><span class="bold_span">Kapacita: </span> 100 osob</p>
+
+              <div id="pricelist">
+                <span class="bold_span">Ceník:</span>
+                <ul>
+                  <li>LV/01 -
+                  <span id="sub_holder"> Zámecká kaple<span id="sub_content"><img src="./img/services/valtice/zamecka_kaple.jpg" alt=""></span></span>
+                  - hodina ve dnech PO-PÁ - 11.000 Kč
+                  </li>
+                  <li>LL/02 - Zámecká kaple - hodina v sobotu - 15.000 Kč</li>
+                  <li>LV/03 -
+                  <span id="sub_holder"> Španělská konírna<span id="sub_content"><img src="./img/services/valtice/spanelska_konirna.jpg" alt=""></span></span>
+                  - 21.000 Kč
+                  </li>
+                  <li>LV/04 -
+                  <span id="sub_holder">Zimní jízdárna<span id="sub_content"><img src="./img/services/valtice/zimni_jizdarna.jpg" alt=""></span></span>
+                  - 48.000 Kč
+                  </li>
+                  <li>LV/05 -
+                  <span id="sub_holder">Salónek nad jízdárnou<span id="sub_content"><img src="./img/services/valtice/salonek_nj.jpg" alt=""></span></span>
+                  - 5.400 Kč
+                  </li>
+                  <li>LV/06 -
+                  <span id="sub_holder">Bílý sál<span id="sub_content"><img src="./img/services/valtice/bily_sal.jpeg" alt=""></span></span>
+                  - 8.000 Kč
+                  </li>
+                  <li>LV/07 -
+                  <span id="sub_holder">Mramorový sál<span id="sub_content"><img src="./img/services/valtice/mramorovy_sal.jpeg" alt=""></span></span>
+                  - 7.500 Kč
+                  </li>
+                  <li>LV/08 -
+                  <span id="sub_holder">Sál a salónek loveckého zámečku Rendez-vous<span id="sub_content"><img src="./img/services/valtice/rendez_vous.jpg" alt=""></span></span>
+                  - 11.500 Kč
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- right -->
+          <div id="loc_right">
+            <img src="./img/services/valtice/valtice.jpg" alt="">
+          </div>
+
+        </li> <!-- end of Valtice -->
+
+
+        <!-- Mikulov -->
+        <li class="loc">
+
+          <!-- left -->
+          <div id="loc_left">
+            <h3 id="ll_title" class="mini_heading">Zámek Mikulov</h3>
+            <div id="ll_text" class="text">
+
+              <p><span class="bold_span">Kapacita: </span> 150 osob</p>
+
+              <div id="pricelist">
+                <span class="bold_span">Ceník:</span>
+                <ul>
+                  <li>LM/01 -
+                  <span id="sub_holder">Velký zámecký sál<span id="sub_content"><img src="./img/services/mikulov/velky_zm.jpg" alt=""></span></span>
+                  - 9.000 Kč
+                  </li>
+                  <li>LM/02 -
+                  <span id="sub_holder">Vinárna<span id="sub_content"><img src="./img/services/mikulov/vinarna.jpg" alt=""></span></span>
+                  - 5.300 Kč
+                  </li>
+                  <li>LM/03 -
+                  <span id="sub_holder">Nástupní sál<span id="sub_content"><img src="./img/services/mikulov/nastupni_sal.jpg" alt=""></span></span>
+                  - 7.800 Kč
+                  </li>
+                  <li>LM/04 -
+                  <span id="sub_holder">Sál předků<span id="sub_content"><img src="./img/services/mikulov/sal_predku.jpg" alt=""></span></span>
+                  - 8.200 Kč
+                  </li>
+                  <li>LM/05 -
+                  <span id="sub_holder">Sala terrena<span id="sub_content"><img src="./img/services/mikulov/sala_terrena.jpg" alt=""></span></span>
+                  - 4.900 Kč
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- right -->
+          <div id="loc_right">
+            <img src="./img/services/mikulov/mikulov.jpg" alt="">
+          </div>
+
+        </li> <!-- end of Mikulov -->
+
+
+        <!-- ,,Další prostory pro obřad" -->
+        <li class="loc">
+
+          <!-- left -->
+          <div id="loc_left">
+            <h3 id="ll_title" class="mini_heading">Další prostory pro obřad</h3>
+            <div id="ll_text" class="text">
+
+              <div id="pricelist">
+                <span class="bold_span">Ceník:</span>
+                <ul>
+                  <li>LD/01 -
+                  <span id="sub_holder">Reistna<span id="sub_content"><img src="./img/services/another_locations_wedding/reistna.jpg" alt=""></span></span>
+                  - 14.000 Kč
+                  </li>
+                  <li>LD/02 -
+                  <span id="sub_holder">Hraniční zámeček Hlohovec<span id="sub_content"><img src="./img/services/another_locations_wedding/hlohovec2.jpg" alt=""></span></span>
+                  - 11.200 Kč
+                  </li>
+                  <li>LD/03 -
+                  <span id="sub_holder">Kaplička na Svatém kopečku<span id="sub_content"><img src="./img/services/another_locations_wedding/kaplicka.JPG" alt=""></span></span>
+                  - 6.400 Kč
+                  </li>
+                  <li>LD/04 -
+                  <span id="sub_holder">Kostel Lednice<span id="sub_content"><img src="./img/services/another_locations_wedding/kostel_lednice.jpg" alt=""></span></span>
+                  - 6.200 Kč
+                  </li>
+                  <li>LD/05 -
+                  <span id="sub_holder">Kostel Sv. Václava<span id="sub_content"><img src="./img/services/another_locations_wedding/kostel_sv_vaclava.jpg" alt=""></span></span>
+                  - 6.500 Kč
+                  </li>
+                  <li>LD/06 -
+                  <span id="sub_holder">Vinařství u Kapličky<span id="sub_content"><img src="./img/services/another_locations_wedding/vinarstvi_u_kaplicky.jpg" alt=""></span></span>
+                  - 7.900 Kč
+                  </li>
+                </ul>
+              </div>
+
+              <p id="another_locations_wedding_cooperation">Spolupracujeme s městy Mikulov, Břeclav, Lednice, Valtice a Hlohovec.</p>
+            </div>
+          </div>
+          <!-- right -->
+          <div id="loc_right">
+            <img src="./img/services/another_locations_wedding/hlohovec.jpg" alt="">
+          </div>
+
+        </li> <!-- end of ,,Další prostory pro obřad" -->
+
+        <!-- ,,Další prostory pro hostinu" -->
+        <li class="loc">
+
+          <!-- left -->
+          <div id="loc_left">
+            <h3 id="ll_title" class="mini_heading">Další prostory pro hostinu</h3>
+            <div id="ll_text" class="text">
+
+              <div id="pricelist">
+                <span class="bold_span">Ceník:</span>
+                <ul>
+                  <li>LD/07 -
+                  <span id="sub_holder">Hraniční zámeček Hlohovec<span id="sub_content"><img src="./img/services/another_locations_feast/hlohovec3.jpg" alt=""></span></span>
+                  - 11.200 Kč
+                  </li>
+                  <li>LD/08 -
+                  <span id="sub_holder">Vinařství u Kapličky<span id="sub_content"><img src="./img/services/another_locations_feast/vinarstvi_u_kaplicky_restaurant.jpg" alt=""></span></span>
+                  - 8.600 Kč
+                  </li>
+                  <li>LD/09 -
+                  <span id="sub_holder">Restaurace U Tlustých<span id="sub_content"><img src="./img/services/another_locations_feast/restaurace_u_tlustych.jpg" alt=""></span></span>
+                  - 12.400 Kč
+                  </li>
+                  <li>LD/10 -
+                  <span id="sub_holder">Hotel Hubertus<span id="sub_content"><img src="./img/services/another_locations_feast/hotel_hubertus.jpg" alt=""></span></span>
+                  - 9.700 Kč
+                  </li>
+                  <li>LD/11 -
+                  <span id="sub_holder">Hotel Galant Mikulov<span id="sub_content"><img src="./img/services/another_locations_feast/hotel_galant_mikulov.jpg" alt=""></span></span>
+                  - 10.200 Kč
+                  </li>
+                  <li>LD/12 -
+                  <span id="sub_holder">Hotel Galant Lednice<span id="sub_content"><img src="./img/services/another_locations_feast/hotel_galant_lednice.jpg" alt=""></span></span>
+                  - 10.300 Kč
+                  </li>
+                </ul>
+              </div>
+
+              <p id="another_locations_wedding_cooperation">Spolupracujeme s městy Mikulov, Břeclav, Lednice, Valtice a Hlohovec.</p>
+            </div>
+          </div>
+          <!-- right -->
+          <div id="loc_right">
+            <img src="./img/services/another_locations_feast/restaurace.JPG" alt="">
+          </div>
+
+        </li> <!-- end of ,,Další prostory pro hostinu" -->
+
+      </ul>
+
+    </section>
+
+
+    <!-- Ceremony decoration -->
+    <section class="services_section ceremony_section">
+
+      <h2 class="middle_heading">Výzdoba obřadního místa</h2>
+
+      <ul id="ceremony_ul">
+        <!-- VOM -->
+        <li id="ceremony_li">
+          <h3 class="mini_heading">Výzdoba obřadního místa</h3>
+          <div class="text">
+            V/01 - Svatební oltář - 1.700 Kč <br>
+            V/02 - Zdobená organzou ve Vámi zvolené barvě či květinami - 1.500 Kč <br>
+            V/03 - Svatební ulička - 2.200 Kč <br>
+            V/04 - Obřadní stůl s bílým ubrusem - 2.500 Kč <br>
+            V/05 - Židle k obřadu - 50 Kč/ks <br>
+            V/06 - Květinové stojany - 890 Kč/ks <br>
+          </div>
+
+          <div class="sec_image"></div>
+        </li> <!-- End of VOM -->
+
+    </section>
+
+
+    <!-- Menu -->
+    <section class="services_section menu_section">
+
+      <h2 class="middle_heading">Svatební menu</h2>
+
+      <ul id="menu_ul">
+        <!-- Menu 1 -->
+        <li id="menu_li">
+          <h3 class="mini_heading">Svatební menu I.</h3>
+          <div class="text">
+            0,1 l Cinzano bianco <br>
+            75g Šunkové závitky se smetanovým křenem a světlým banketním pečivem <br>
+            0,15l Hovězí vývar s játrovými knedlíčky <br>
+            150g Tradiční svíčková na smetaně s brusinkami, citronem a šlehačkou podáváno s houskovými a karlovarskými knedlíky <br><br>
+            M/01 - 610 Kč/osoba
+          </div>
+
+          <div class="sec_image"></div>
+        </li> <!-- End of Menu 1 -->
+
+        <!-- Menu 2 -->
+        <li id="menu_li">
+          <h3 class="mini_heading">Svatební menu II.</h3>
+          <div class="text">
+            0,1 l Bohemia sekt brut <br>
+            75g Plátky parmské šunky s medovým melounem <br>
+            0,15l Zeleninová polévka s nočky a čerstvou petrželkou <br>
+            150g Špalíčky z vepřové panenky a kuřecích prsou rolované v tyrolském špeku, smetanové žampiony, zámecké brambůrky <br><br>
+            M/02 - 540 Kč/osoba
+          </div>
+
+          <div class="sec_image"></div>
+        </li> <!-- End of Menu 2 -->
+
+        <!-- Menu 3 -->
+        <li id="menu_li">
+          <h3 class="mini_heading">Svatební menu III.</h3>
+          <div class="text">
+            0,04 l Portské víno bílé <br>
+            80g Kachní paštika s brusinkovým přelivem a domácím světlým chlebem <br>
+            0,15l Kuřecí kaldon s domácími nudlemi a zeleninou Julienne <br>
+            150g Grilovaný losos s jemnou limetkovou omáčkou, podáváno s bramborovými noky <br><br>
+            M/03 - 450 Kč/osoba
+          </div>
+
+          <div class="sec_image"></div>
+        </li> <!-- End of Menu 3 -->
+      </ul>
+
+    </section>
+
+
+    <!-- Photograph, Cameraman and Music -->
+    <section class="services_section photo_section">
+
+      <h2 class="middle_heading">Fotograf, kameraman a hudba</h2>
+
+      <ul id="photo_ul">
+        <!-- Photograph -->
+        <li id="photo_li">
+          <h3 class="mini_heading">Fotograf</h3>
+          <div class="text">
+            F/01 - Obřad - 3.300 Kč  <br>
+            F/02 - Hostina - 3.800 Kč <br>
+            F/03 - Obřad + Hostina - 6.000 Kč <br><br>
+            (svatební fotokniha zdarma při kombinaci Obřad + Hostina)
+          </div>
+
+          <div class="sec_image"></div>
+        </li> <!-- End of Photograph -->
+
+        <!-- Cameraman -->
+        <li id="photo_li">
+          <h3 class="mini_heading">Kameraman</h3>
+          <div class="text">
+            F/04 - Obřad - 2.700 Kč  <br>
+            F/05 - Hostina - 2.300 Kč <br>
+            F/06 - Obřad + Hostina - 4.000 Kč <br><br>
+          </div>
+
+          <div class="sec_image"></div>
+        </li> <!-- End of Cameraman -->
+
+        <!-- Music -->
+        <li id="photo_li">
+          <h3 class="mini_heading">Hudba</h3>
+          <div class="text">
+            H/01 - Varhaník nebo pianista či solokytara - 3.800 Kč <br>
+            H/02 - Violoncello a piano nebo harfa - 4.200 Kč <br>
+            H/03 - Smyčcový kvartet (2x housle, viola, violoncello)  - 4.600 Kč <br>
+            H/04 - Kytara, klavír a sólový nástroj (housle, saxofon,trubka) - 9.600 Kč <br>
+            H/05 - DJ (hudební doprovod a moderování) - 7.000  Kč/5 hodin
+          </div>
+
+          <div class="sec_image"></div>
+        </li> <!-- End of Music -->
+      </ul>
+
+    </section>
+
+    <!-- Additional offer -->
+    <section class="services_section offer_section">
+
+      <h2 class="middle_heading">Doplňková nabídka</h2>
+
+      <ul id="offer_ul">
+        <!-- Make-Up Artist -->
+        <li id="offer_li">
+          <h3 class="mini_heading">Vizážistka</h3>
+          <div class="text">
+            D/01 - Zkouška líčení, originální líčení, účes (na zámku, nebo u Vás doma) - 530 Kč
+          </div>
+
+          <div class="sec_image"></div>
+        </li> <!-- End of Make-Up Artist -->
+
+        <!-- Wedding Carriage -->
+        <li id="offer_li">
+          <h3 class="mini_heading">Projížďka svatebním kočárem</h3>
+          <div class="text">
+            D/02 - pronájem na 1 hodinu (projížďka v okolí Hrubé Skály) - 3.500 Kč
+          </div>
+
+          <div class="sec_image"></div>
+        </li> <!-- End of Wedding Carriage -->
+
+        <!-- Limousine -->
+        <li id="offer_li">
+          <h3 class="mini_heading">Pronájem limuzíny</h3>
+          <div class="text">
+            D/03 - pronájem na 3 hodiny do 120km (přistavení vozu do 30km zdarma) - 12.000 Kč <br><br>
+            V ceně zahrnut sekt, nealkoholické nápoje a služby řidiče.
+          </div>
+
+          <div class="sec_image"></div>
+        </li> <!-- End of Limousine -->
+
+        <!-- Wedding Party Tents -->
+        <li id="offer_li">
+          <h3 class="mini_heading">Svatební party stany</h3>
+          <div class="text">
+            Party stany jsou jednoduchým přitom kvalitním zastřešením vhodným <br>pro slavnostní hostinu i večerní party. <br>
+            Díky tomuto řešení Váš svatební den nenaruší déšť ani prudké slunce. <br>
+            Dovolujeme si Vám nabídnout zapůjčení party stanů v několika rozměrech. <br>
+            Rozměry od 3 x 4 m <br><br>
+            D/04 - 3.000 Kč
+          </div>
+
+          <div class="sec_image"></div>
+        </li> <!-- End of Wedding Party Tents -->
+
+        <!-- Cakes -->
+        <li id="offer_li">
+          <h3 class="mini_heading">Dorty</h3>
+          <div class="text">
+            D/05 - Malý (40 porcí) - 3.200 Kč <br>
+            D/06 - Střední (70 porcí) - 6.700 Kč <br>
+            D/07 - Velký (120 porcí) - 11.300 Kč <br><br>
+            Spolupracujme s profesionální cukrářkou, která vyhoví jakýmkoli vašim přáním.
+            Konkrétní design dortu je na domluvě a cena se na něj nevztahuje.
+          </div>
+
+          <div class="sec_image"></div>
+        </li> <!-- End of Cakes -->
+
+        <!-- Bouquet -->
+        <li id="offer_li">
+          <h3 class="mini_heading">Kytice</h3>
+          <div class="text">
+            D/08 - Kulatá - 1.400 Kč <br>
+            D/09 - Převislá - 1.700 Kč <br>
+            D/10 - Extravagantní - 2.000 Kč
+          </div>
+
+          <div class="sec_image"></div>
+        </li> <!-- End of Bouquet -->
+
+        <!-- Wedding Stationery -->
+        <li id="offer_li">
+          <h3 class="mini_heading">Svatební tiskoviny</h3>
+          <div class="text">
+            Zajistíme pro Vás: <br>
+            (cena za 1 kus) <br><br>
+            D/11 - Svatební oznámení - 30 Kč <br>
+            D/12 - Jmenovky -  18 Kč <br>
+            D/13 - Menu - 55 Kč <br>
+            D/14 - Programy - 38 Kč <br>
+            D/15 - Děkovná kartička - 12 Kč <br>
+            D/16 - Zasedací pořádek - 800 Kč <br>
+            D/17 - Obálky - 8 Kč <br>
+            D/18 - Samolepicí etikety na víno či slivovici - 26 Kč <br>
+            D/19 - Cedulky s žádostí o finanční dary - 17 Kč
+          </div>
+
+          <div class="sec_image"></div>
+        </li> <!-- End of Wedding Stationery -->
+
+        <!-- Wedding Dress -->
+        <li id="offer_li">
+          <h3 class="mini_heading">Svatební šaty</h3>
+          <div class="text">
+            Naše firma svatební šaty sice nenabízí, <br>
+            ale pokud si zakoupíte naše služby, máte ve <br>
+            vybraných svatebních salónech slevu až 20%.
+          </div>
+
+          <div class="sec_image"></div>
+        </li> <!-- End of Wedding Dress -->
+
+      </ul>
+
+    </section>
+
+    <!--VAT Included -->
+    <section class="services_section vat_section">
+      <h2>Všechny ceny jsou uvedeny včetně 21% DPH</h2>
+    </section>
+
+    <!-- FOOTER -->
+
+    <?php include './includes/footer.php'; ?>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./script/jquery.cookie.js"></script>
+    <script src='./script/main_script.js'></script>
+    <script src='./script/services.js'></script>
+
+  </body>
+</html>

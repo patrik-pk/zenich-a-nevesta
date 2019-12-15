@@ -1,0 +1,393 @@
+
+@import "../_global/styles.scss";
+
+/* SERVICES */ 
+
+.services {
+
+    .bold_span {
+        font-weight: bold;
+    }
+
+    .position_navigation {
+        display: none;
+
+        @include desktop {
+            display: block
+        }
+        
+        .nav_container {
+            position: absolute;
+            background: black;
+
+            ul {
+                padding: 3px 3px 3px 0;
+
+                li {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background: white;
+                    width: 50px;
+                    height: 50px;
+                    margin: 3px 0;
+                    cursor: pointer;
+
+                    img {
+                        width: 40px;
+                        height: 40px;
+                    }
+                }
+
+                li:first-child {
+                    margin-top: 0;
+                }
+
+                li:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    .services_section {
+        width: 80%;
+        margin: auto;
+
+        @mixin services_responsive($width) {
+            width: $width;
+        }
+
+        @include mobile-portrait { @include services_responsive(95%); }
+        @include mobile-landscape { @include services_responsive(95%); }
+        @include tablet-portrait { @include services_responsive(90%); }
+        @include tablet-landscape { @include services_responsive(80%); }
+
+        .middle_heading {
+            margin: 200px 0 100px 0;
+            text-align: center;
+            font-size: 3.5rem;
+            font-family: Raleway, Helvetica, sans-serif;
+            font-weight: normal;
+            color: $dark_orange;
+
+            @mixin services_middle_heading_responsive($margin, $font_size) {
+                margin: $margin;
+                font-size: $font_size;
+            }
+
+            @include mobile-portrait { @include services_middle_heading_responsive(50px 0 40px 0, 1.7rem); }
+            @include mobile-landscape { @include services_middle_heading_responsive(50px 0 40px 0, 1.7rem); }
+            @include tablet-portrait { @include services_middle_heading_responsive(50px 0 40px 0, 2rem); }
+            @include tablet-landscape { @include services_middle_heading_responsive(70px 0 70px 0, 2.2rem); }
+        }
+
+        .mini_heading {
+            margin: 25px 0 0 25px;
+            font-family: Raleway, Helvetica, sans-serif;
+            font-weight: normal;
+            font-size: 2rem;
+            color: $dark_orange;
+
+            @mixin services_mini_heading_responsive($font_size) {
+                width: 100%;
+                margin: 20px 0 0 10px;
+                font-size: $font_size;
+            }
+
+            @include mobile-portrait { @include services_mini_heading_responsive(1.1rem); }
+            @include mobile-landscape { @include services_mini_heading_responsive(1.1rem); }
+            @include tablet-portrait { @include services_mini_heading_responsive(1.3rem); }
+            @include tablet-landscape { @include services_mini_heading_responsive(1.5rem); }
+        }
+
+        .text {
+            margin: 40px 0 0 25px;
+            font-size: 1rem;
+            font-family: Raleway, Helvetica, sans-serif;
+            font-weight: normal;
+            color: gray;
+            letter-spacing: 1px;
+            line-height: 2rem;
+
+            @mixin services_text_responsive($font_size) {
+                margin: 20px 0 0 10px;
+                font-size: $font_size;
+                font-family: Raleway, Helvetica, sans-serif;
+                line-height: 1.6rem;
+            }
+
+            @include mobile-portrait { @include services_text_responsive(0.9rem); }
+            @include mobile-landscape { @include services_text_responsive(0.9rem); }
+            @include tablet-portrait { @include services_text_responsive(0.95rem); }
+            @include tablet-landscape { @include services_text_responsive(1rem); }
+        }
+    }
+
+    /* LOCATIONS SECTION */
+
+    .locations_section {
+
+        #locations {
+
+            .loc {
+                display: flex;
+                margin: 50px 0;
+    
+                #loc_left {
+                    flex: 1;
+    
+                    #ll_text {
+    
+                        #sub_holder {
+                            position: relative;
+                        }
+        
+                        #sub_holder:hover {
+                            @include desktop {
+                                text-decoration: underline;
+                                cursor: pointer;
+                                color: $dark_orange;
+            
+                                #sub_content {
+                                    display: block;
+                                    z-index: 10;
+                                }
+                            }
+                        }
+        
+                        #sub_content {
+                            display: none;
+                            position: absolute;
+                            top: 30px;
+                            left: 0;
+                            width: 400px;
+                            height: 300px;
+                            border: 2px $dark_orange solid;
+                            cursor: default;
+        
+                            img {
+                                width: inherit;
+                                height: inherit;
+                                object-fit: cover;
+                            }
+                        }
+                    }
+                }
+    
+                #another_locations_wedding_cooperation {
+                    margin-top: 50px;
+                } 
+    
+                #loc_right {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    min-height: 500px;
+                    flex: 1;
+
+                    @mixin services_locr_responsive {
+                        display: none;
+                    }
+
+                    @include mobile-portrait { @include services_locr_responsive; }
+                    @include mobile-landscape { @include services_locr_responsive; }
+                    @include tablet-portrait { @include services_locr_responsive; }
+                    @include tablet-landscape { @include services_locr_responsive; }
+    
+                    img {
+                        width: 90%;
+                        height: 450px;
+                        border: 2px $dark_orange solid;
+                        object-fit: cover;
+
+                        /*@include tablet-landscape {
+                            height: 400px;
+                        }*/
+                    }
+                }
+            }
+        }
+    }
+
+    /* ALL SECTIONS EXCEPT LOCATIONS */
+
+    .menu_section #menu_ul #menu_li, .ceremony_section #ceremony_ul #ceremony_li, .photo_section #photo_ul #photo_li, .offer_section #offer_ul #offer_li {
+        /*width: 60%;
+        margin: 75px;*/
+        width: 65%;
+        margin: 75px 0;
+
+        @include mobile-portrait {
+            margin: auto;
+            width: 100%;
+        }
+
+        @include mobile-landscape {
+            margin: auto;
+            width: 100%;
+        }
+    }
+
+    .ceremony_section #ceremony_li, .menu_section #menu_li, .photo_section #photo_li, .offer_section #offer_li {
+        position: relative;
+    }
+
+    .sec_image {
+        display: none;
+        position: absolute;
+        top: 0;
+        right: -382px;
+        border: 2px $dark_orange solid;
+        width: 300px;
+        height: 300px;
+        background-size: cover;
+        @include desktop {
+            display: block;
+        }
+    }
+
+    /* CEREMONY DECORATION */
+
+    .ceremony_section #ceremony_li:first-child .sec_image {
+        background-image: url("../../img/services/ceremony_decoration/ceremony_decoration.jpg");
+        background-position: center center;
+    }
+
+    /* MENU*/
+
+    .menu_section #menu_li:first-child .sec_image {
+        background-image: url("../../img/services/menu/menu_1.jpg");
+        background-position: -120px center;
+    }
+    
+    .menu_section #menu_li:nth-child(2) .sec_image {
+        background-image: url("../../img/services/menu/menu_2.jpg");
+        background-position: -80px center;
+    }
+    
+    .menu_section #menu_li:nth-child(3) .sec_image {
+        background-image: url("../../img/services/menu/menu_3.jpg");
+        background-position: center -150px;
+    }
+  
+    /* Photograph, Cameraman, Music */
+
+    .photo_section .sec_image {
+        height: 250px;
+    }
+    
+    .photo_section #photo_li:first-child .sec_image {
+        background-image: url("../../img/services/pcm/photograph.jpg");
+    }
+    
+    .photo_section #photo_li:nth-child(2) .sec_image {
+        background-image: url("../../img/services/pcm/cameraman.jpg");
+        background-position: -40px center;
+    }
+    
+    .photo_section #photo_li:nth-child(3) .sec_image {
+        background-image: url("../../img/services/pcm/music.jpg");
+        background-position: center -170px;
+    }
+
+    /* Offer */
+
+    .offer_section .sec_image {
+        height: 250px;
+    }
+
+    .offer_section #offer_li:first-child .text, #offer_li:nth-child(2) .text, #offer_li:nth-child(3) .text,
+    .offer_section #offer_li:nth-child(6) .text, #offer_li:nth-child(8) .text {
+        margin-bottom: 200px;
+
+        @mixin services_li_responsive {
+            margin-bottom: 70px;
+        }
+
+        @include mobile-portrait { @include services_li_responsive; }
+        @include mobile-landscape { @include services_li_responsive; }
+        @include tablet-portrait { @include services_li_responsive; }
+        @include tablet-landscape { @include services_li_responsive; }
+    }
+
+    .offer_section #offer_li:first-child .sec_image { /* make-up artist */
+        background-image: url("../../img/services/offer/make-up_artist.jpg");
+        background-position: -70px center;
+    }
+
+    .offer_section #offer_li:nth-child(2) .sec_image { /* wedding carriage */
+        background-image: url("../../img/services/offer/carriage.jpg");
+        background-position: center center;
+    }
+
+    .offer_section #offer_li:nth-child(3) .sec_image { /* limousine */
+        background-image: url("../../img/services/offer/limousine.jpg");
+        background-position: center center;
+    }
+
+    .offer_section #offer_li:nth-child(4) .sec_image { /* party tents */
+        background-image: url("../../img/services/offer/party_tent.jpg");
+        background-position: center center;
+        height: 300px;
+    }
+
+    .offer_section #offer_li:nth-child(5) .sec_image { /* cakes */
+        background-image: url("../../img/services/offer/cake.jpg");
+        background-position: center -50px;
+        height: 300px;
+    }
+
+    .offer_section #offer_li:nth-child(6) .sec_image { /* bouquet */
+        background-image: url("../../img/services/offer/bouquet.jpg");
+        background-position: center -130px;
+    }
+
+    .offer_section #offer_li:nth-child(7) .sec_image { /* stationery */
+        background-image: url("../../img/services/offer/stationery.jpg");
+        background-position: -180px center;
+        width: 400px;
+        height: 450px;
+    }
+
+    .offer_section #offer_li:nth-child(8) .sec_image { /* wedding dress */
+        background-image: url("../../img/services/offer/wedding_dress.jpg");
+        background-position: center center;
+        width: 350px;
+    }
+
+    /* VAT section */
+
+    .vat_section {
+        width: 100%;
+        margin: 250px 0 100px 0;
+
+        @mixin services_vat_responsive {
+            width: 70%;
+            margin: auto;
+            padding-bottom: 80px;
+        }
+
+        @include mobile-portrait { @include services_vat_responsive; }
+        @include mobile-landscape { @include services_vat_responsive; }
+        @include tablet-portrait { @include services_vat_responsive; }
+        @include tablet-landscape { @include services_vat_responsive; }
+    }
+    
+    .vat_section h2 {
+        text-align: center;
+        font-family: Raleway, Helvetica, sans-serif;
+        font-size: 1.5rem;
+        font-weight: normal;
+        color: $dark_orange;
+
+        @mixin services_vat_h2_responsive {
+            font-size: 1.2rem;
+        }
+
+        @include mobile-portrait { @include services_vat_h2_responsive; }
+        @include mobile-landscape { @include services_vat_h2_responsive; }
+        @include tablet-portrait { @include services_vat_h2_responsive; }
+        @include tablet-landscape { @include services_vat_h2_responsive; }
+    }
+}

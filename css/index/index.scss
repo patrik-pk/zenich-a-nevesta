@@ -1,0 +1,262 @@
+
+@import "../_global/styles.scss";
+
+/* Index */
+
+body {
+
+    #index_header {
+        min-height: 500px;
+        background-image: url("../../img/index/uvod.jpg");
+    }
+
+    .first_section {
+        width: 80%;
+        margin: 100px auto;
+
+        @mixin first_section_responsive($width, $margin) {
+            width: $width;
+            margin: $margin;
+        }
+
+        @include mobile-portrait { @include first_section_responsive(95%, 40px auto 10px auto); }
+        @include mobile-landscape { @include first_section_responsive(90%, 30px auto 10px auto) };
+        @include tablet-portrait { @include first_section_responsive(95%, 100px auto); }
+
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            li {
+                position: relative;
+                width: 350px;
+                height: 120px;
+                margin: 20px;
+
+                @mixin first_section_li_responsive($padding) {
+                    width: 300px;
+                    min-height: 70px;
+                    margin: 0;
+                    padding: $padding;
+                }
+
+                @include mobile-portrait { @include first_section_li_responsive(20px 0) };
+                @include mobile-landscape { @include first_section_li_responsive(20px 0) };
+                @include tablet-portrait { @include first_section_li_responsive(20px 30px) };
+
+                #item_top {
+
+                    h2 {
+                        position: absolute;
+                        top: 12px;
+                        left: 50px;
+                        width: 100%;
+                        color: $dark_orange;
+                        font-weight: bold;
+                        font-family: Raleway, Helvetica, sans-serif;
+                        font-size: 1.4rem;
+                        letter-spacing: 1px;
+
+                        @include mobile-portrait {
+                            font-size: 1.2rem;
+                        }
+
+                        @include mobile-landscape {
+                            font-size: 1.3rem;
+                        }
+
+                        @include tablet-portrait {
+                            font-size: 1.4rem;
+                        }
+                    }
+
+                    img {
+                        position: absolute;
+                        top: 10px;
+                        left: 10px;
+                        width: 30px;
+                        height: 30px;
+
+                        @mixin img_responsive {
+                            width: 25px;
+                            height: 25px;
+                        }
+
+                        @include mobile-portrait { @include img_responsive; }
+                        @include mobile-landscape { @include img_responsive; }
+                        @include tablet-portrait { @include img_responsive; }
+                    }         
+                }
+
+                #item_bottom {
+
+                    p {
+                        position: absolute;
+                        top: 60px;
+                        left: 10px;
+                        font-weight: 300;
+                        color: #888888;
+                        font-family: Raleway, Helvetica, sans-serif;
+                        letter-spacing: 1px;
+                        font-size: 0.9rem;
+                        line-height: 1.2rem;
+                    }
+                }
+            }
+
+            li:nth-child(3) {
+                @include mobile-portrait { margin-top: -30px; }
+            }
+        }
+    }
+
+    .second_section {
+        position: relative;
+        width: 100%;
+        min-height: 600px;
+        background-image: url("../../img/index/reference.jpg");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-attachment: scroll;
+        background-size: 100%;
+
+        @mixin second_section_responsive {
+            background-size: cover;
+        }
+
+        @include mobile-portrait { @include second_section_responsive; }
+        @include mobile-landscape { @include second_section_responsive; }
+        @include tablet-portrait { @include second_section_responsive; }
+
+        .dark_overlay {
+            width: 100%;
+            min-height: inherit;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+
+        #heading {
+            position: absolute;
+            top: 60px;
+            left: 50%;
+            transform: translate(-50%, 0);
+            color: white;
+            font-family: Raleway, Helvetica, sans-serif;
+            font-size: 2rem;
+            font-weight: 300;
+            letter-spacing: 2px;
+
+            @mixin ss_heading_responsive($font_size) {
+                top: 40px;
+                font-size: $font_size;
+            }
+
+            @include mobile-portrait { @include ss_heading_responsive(1.2rem); } 
+            @include mobile-landscape { @include ss_heading_responsive(1.3rem); }
+            @include tablet-portrait { @include ss_heading_responsive(1.3rem); }
+            @include tablet-landscape { @include ss_heading_responsive(1.6rem); }
+        }
+
+        #content {
+
+            ul {
+                position: absolute;
+                top: 40%;
+                left: 50%;
+                transform: translate(-50%, 0);
+                display: flex;
+                justify-content: center;
+
+                @mixin ss_ul_responsive {
+                    top: 100px;
+                    flex-direction: column;
+                    margin-top: 20px;
+                }
+
+                @include mobile-portrait { @include ss_ul_responsive; }
+                @include mobile-landscape { @include ss_ul_responsive; }
+                @include tablet-portrait { @include ss_ul_responsive; }
+
+                li {
+                    position: relative;
+                    width: 350px;
+                    height: 170px;
+                    margin: 0 50px;
+
+                    @mixin ss_li_responsive($width, $height, $margin) {
+                        width: $width;
+                        height: $height;
+                        margin: $margin;
+                    }
+
+                    @include mobile-portrait { @include ss_li_responsive(300px, 110px, 20px 50px); }
+                    @include mobile-landscape { @include ss_li_responsive(300px, 110px, 20px 50px); }
+                    @include tablet-portrait { @include ss_li_responsive(300px, 110px, 20px 50px); }
+                    @include tablet-landscape { @include ss_li_responsive(250px, 170px, 0px 30px); }
+
+                    img {
+                        position: absolute;
+                        top: 10px;
+                        left: 50%;
+                        transform: translate(-50%, 0);
+                        width: 45px;
+                        height: 45px;
+
+                        @mixin ss_img_responsive($top, $width, $height)  {
+                            top: $top;
+                            width: $width;
+                            height: $height;
+                        }
+
+                        @include mobile-portrait { @include ss_img_responsive(0, 30px, 30px); }
+                        @include mobile-landscape { @include ss_img_responsive(10px, 30px, 30px); }
+                        @include tablet-portrait { @include ss_img_responsive(7px, 35px, 35px); }
+                        @include tablet-landscape { @include ss_img_responsive(0, 35px, 35px); }
+                    }
+
+                    #r_text {
+                        position: absolute;
+                        top: 80px;
+                        width: inherit;
+                        text-align: center;
+                        padding: 0 10px;
+                        color: white;
+                        font-size: 1rem;
+                        font-weight: 300;
+                        letter-spacing: 1px;
+                        font-family: Raleway, Helvetica, sans-serif;
+
+                        @mixin ss_text_responsive($font_size) {
+                            top: 50px;
+                            font-size: $font_size;
+                        }
+
+                        @include mobile-portrait { @include ss_text_responsive(0.7rem); max-width: 90%; }
+                        @include mobile-landscape { @include ss_text_responsive(0.8rem); }
+                        @include tablet-portrait { @include ss_text_responsive(0.9rem); }
+                        @include tablet-landscape { @include ss_text_responsive(0.9rem); }
+                    }
+
+                    #r_name {
+                        position: absolute;
+                        bottom: 15px;
+                        width: inherit;
+                        color: $light_orange;
+                        text-align: center;
+                        font-weight: bolder;
+
+                        @mixin ss_name_responsive($font_size, $bottom) {
+                            font-size: $font_size;
+                            bottom: $bottom;
+                        }
+
+                        @include mobile-portrait { @include ss_name_responsive(0.7rem, 10px); }
+                        @include mobile-landscape { @include ss_name_responsive(0.8rem, 0); }
+                        @include tablet-portrait { @include ss_name_responsive(0.9rem, -5px); }
+                        @include tablet-landscape { @include ss_name_responsive(0.9rem, 45px); }
+                    }
+                }
+            }
+        }
+    }
+}

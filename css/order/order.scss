@@ -1,0 +1,323 @@
+
+@import "../_global/styles.scss";
+
+/* ORDER */ 
+
+.order {
+
+    .order_section {
+        font-family: Raleway, Helvetica, sans-serif;
+
+        .order_container {
+            width: 80%;
+            margin: 100px auto 100px auto;
+
+            @mixin order_responsive {
+                width: 90%;
+                margin: 50px auto 50px auto;
+            }
+
+            @include mobile-portrait { @include order_responsive; }
+            @include mobile-landscape { @include order_responsive; }
+            @include tablet-portrait { @include order_responsive; }
+            @include tablet-landscape { @include order_responsive; }
+
+            .li_main {
+
+                h4 {
+                    margin-top: 100px;
+                    margin-left: 10px;
+                    color: $dark_orange;
+                    font-size: 2rem;
+                    font-weight: bold;
+                    letter-spacing: 1px;
+
+                    @mixin order_li_h4_responsive($font_size) {
+                        margin-top: 70px;
+                        margin-left: 5px;
+                        font-size: $font_size;
+                    }
+
+                    @include mobile-portrait { @include order_li_h4_responsive(1rem); }
+                    @include mobile-landscape { @include order_li_h4_responsive(1.3rem); }
+                    @include tablet-portrait { @include order_li_h4_responsive(1.5rem); }
+                    @include tablet-landscape { @include order_li_h4_responsive(1.5rem); }
+                }
+
+                hr {
+                    margin: 10px 0 40px 0;
+                    background: $dark_orange;
+                    border: 1px solid $dark_orange;
+
+                    @mixin order_hr_responsive {
+                        margin: 5px 0 30px 0;
+                    }
+
+                    @include mobile-portrait { @include order_hr_responsive; }
+                    @include mobile-landscape { @include order_hr_responsive; }
+                    @include tablet-portrait { @include order_hr_responsive; }
+                    @include tablet-landscape { @include order_hr_responsive; }
+                }
+
+                ul {
+
+                    li {
+                        display: flex;
+                        margin: 20px 0;
+
+                        @mixin order_li_responsive {
+                            margin: 15px 0;
+                        }
+
+                        @include mobile-portrait { @include order_li_responsive; }
+                        @include mobile-landscape { @include order_li_responsive; }
+                        @include tablet-portrait { @include order_li_responsive; }
+                        @include tablet-landscape { @include order_li_responsive; }
+
+                        #h5_container {
+                            width: 50%;
+
+                            @mixin order_h5_container_responsive {
+                                height: 35px;
+                                display: flex;
+                                align-items: center;
+                            }
+
+                            @include mobile-portrait { @include order_h5_container_responsive; }
+                            @include mobile-landscape { @include order_h5_container_responsive; }
+                            @include tablet-portrait { @include order_h5_container_responsive; }
+
+                            h5 {
+                                margin-left: 50px;
+                                color: $dark_orange;
+                                font-weight: normal;
+                                font-size: 1.2rem;
+
+                                @mixin order_h5_responsive($margin-left, $font_size) {
+                                    margin-left: $margin-left;
+                                    font-size: $font_size;
+                                }
+
+                                @include mobile-portrait { @include order_h5_responsive(10px, 0.9rem); }
+                                @include mobile-landscape { @include order_h5_responsive(20px, 1rem); }
+                                @include tablet-portrait { @include order_h5_responsive(20px, 1.1rem); }
+                                @include tablet-landscape { @include order_h5_responsive(20px, 1.1rem); }
+                            }
+                        }
+
+                        #select_container {
+                            width: 50%;
+                            display: flex;
+
+                            select {
+                                width: 80%;
+                                height: 35px;
+                                border: 1px solid #b0b0b0;
+                            }
+
+                            input {
+                                margin-left: 10px;
+                                width: 33px;
+                                height: 33px;
+                                font-size: 1rem;
+                                text-align: center;
+                                border: 1px solid #b0b0b0;
+                            }
+
+                            button {
+                                margin-left: 10px;
+                                width: 35px;
+                                height: 35px;
+                                background-color: white;
+                                border: 1px solid #b0b0b0;
+                                background-image: url("../../img/icons/add.png");
+                                background-position: center center;
+                                background-size: 40%;
+                                background-repeat: no-repeat;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+            }
+
+            #date_person_container {
+                
+                h5 {
+                    margin-left: 50px;
+                    color: $dark_orange;
+                    font-weight: normal;
+                    font-size: 1.2rem;
+
+                    @mixin order_dp_h5_responsive($margin-left, $font_size) {
+                        margin-left: $margin-left;
+                        font-size: $font_size;
+                    }
+
+                    @include mobile-portrait { @include order_dp_h5_responsive(10px, 0.9rem); }
+                    @include mobile-landscape { @include order_dp_h5_responsive(20px, 1rem); }
+                    @include tablet-portrait { @include order_dp_h5_responsive(20px, 1.1rem); }
+                    @include tablet-landscape { @include order_dp_h5_responsive(20px, 1.1rem); }
+                }
+
+                #date {
+                    width: 50%;
+                    display: flex;
+
+                    @mixin order_date_responsive {
+                        width: 100%;
+                        display: flex;
+                    }
+
+                    @include mobile-portrait { @include order_date_responsive; }
+                    @include mobile-landscape { @include order_date_responsive; }
+                    @include tablet-portrait { @include order_date_responsive; }
+                    @include tablet-landscape { @include order_date_responsive; }
+
+                    input {
+                        margin-left: 10px;
+                    }
+                }
+
+                #person {
+                    margin-top: 20px;
+                    width: 50%;
+                    display: flex;
+
+                    input {
+                        width: 33px;
+                        margin-left: 10px;
+                        text-align: center;
+                    }
+                }
+            }
+
+            #li_complete {
+                margin-top: 40px;
+                position: relative;
+
+                #order_confirmation {
+                    position: absolute;
+                    display: none;
+                    bottom: -30px;
+                    left: -30px;
+                    font-weight: bold;
+
+                    @mixin order_complete_confirm_responsive {
+                        left: 0;
+                        bottom: 30px;
+                    }
+
+                    @include mobile-portrait { @include order_complete_confirm_responsive; }
+                    @include mobile-landscape { @include order_complete_confirm_responsive; }
+                    @include tablet-portrait { @include order_complete_confirm_responsive; }
+                    @include tablet-landscape { @include order_complete_confirm_responsive; }
+                }
+
+                hr {
+                    margin-bottom: 70px;
+
+                    @mixin order_complete_hr_responsive {
+                        margin-bottom: 30px;
+                    }
+
+                    @include mobile-portrait { @include order_complete_hr_responsive; }
+                    @include mobile-landscape { @include order_complete_hr_responsive; }
+                    @include tablet-portrait { @include order_complete_hr_responsive; }
+                    @include tablet-landscape { @include order_complete_hr_responsive; }
+                }
+
+                #complete_container {
+                    display: flex;
+
+                    @mixin order_complete_container_responsive {
+                        flex-direction: column;
+                    }
+
+                    @include mobile-portrait { @include order_complete_container_responsive; }
+                    @include mobile-landscape { @include order_complete_container_responsive; }
+                    @include tablet-portrait { @include order_complete_container_responsive; }
+                    @include tablet-landscape { @include order_complete_container_responsive; }
+
+                    #total {
+                        width: 50%;
+                        display: flex;
+
+                        @mixin order_total_responsive {
+                            width: 100%;
+                            display: flex;
+                        }
+
+                        @include mobile-portrait { @include order_total_responsive; }
+                        @include mobile-landscape { @include order_total_responsive; }
+                        @include tablet-portrait { @include order_total_responsive; }
+                        @include tablet-landscape { @include order_total_responsive; }
+
+                        #final_amount {
+                            margin-left: 5px;
+                            font-weight: bold;
+                        }
+                    }
+
+                    #complete_btn {
+                        width: 50%;
+
+                        @mixin order_complete_btn_container {
+                            width: 100%;
+                            margin-top: 20px;
+                        }
+
+                        @include mobile-portrait { @include order_complete_btn_container; }
+                        @include mobile-landscape { @include order_complete_btn_container; }
+                        @include tablet-portrait { @include order_complete_btn_container; }
+                        @include tablet-landscape { @include order_complete_btn_container; }
+
+                        button {
+                            float: right;
+                            margin-right: 20px;
+                            width: auto;
+                            height: auto;
+                            padding: 5px 10px;
+                            background-color: $dark_orange;
+                            border: 2px solid $dark_orange;
+                            color: white;
+                            font-weight: normal;
+                            font-size: 1.2rem;
+                            cursor: pointer;
+                            border: 2px $dark_orange solid;
+                            border-radius: 10px;
+
+                            @mixin order_complete_btn($font_size) {
+                                float: left;
+                                margin-left: 10px;
+                                font-size: $font_size;
+                            }
+
+                            @include mobile-portrait { @include order_complete_btn(0.9rem); }
+                            @include mobile-landscape { @include order_complete_btn(1rem); }
+                            @include tablet-portrait { @include order_complete_btn(1.1rem); }
+                            @include tablet-landscape { @include order_complete_btn(1.1rem); }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    .h5_style { /* on the left of complete btn */
+        margin-left: 50px;
+        color: $dark_orange;
+        font-weight: normal;
+        font-size: 1.2rem;
+
+        @mixin h5_style_responsive($font_size) {
+            margin-left: 10px;
+            font-size: $font_size;
+        }
+
+        @include mobile-portrait { @include h5_style_responsive(0.9rem); }
+        @include mobile-landscape { @include h5_style_responsive(1rem); }
+        @include tablet-portrait { @include h5_style_responsive(1.1rem); }
+        @include tablet-landscape { @include h5_style_responsive(1.1rem); }
+    }
+}

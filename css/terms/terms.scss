@@ -1,0 +1,73 @@
+
+@import "../_global/styles.scss";
+
+/*  TERMS AND CONDITIONS */
+
+.terms_and_conditions {
+
+    .terms_section {
+        width: 52%;
+        min-height: 800px;
+        margin: auto;
+
+
+        @include mobile-portrait { width: 90%; }
+        @include mobile-landscape { width: 80%; }
+        @include tablet-portrait { width: 70%; }
+        @include tablet-landscape { width: 60%; }
+
+        #terms_content {
+            margin-top: 80px;
+            margin-bottom: 100px;
+            font-family: Raleway, Helvetica, sans-serif;
+            color: gray;
+
+            @mixin terms_content_responsive($margin-top, $margin-bottom) {
+                margin-top: $margin-top;
+                margin-bottom: $margin-bottom;
+            }
+
+            @include mobile-portrait { @include terms_content_responsive(50px, 50px); }
+            @include mobile-landscape { @include terms_content_responsive(50px, 50px); }
+            @include tablet-portrait { @include terms_content_responsive(50px, 50px); }
+            @include tablet-landscape { @include terms_content_responsive(50px, 50px); }
+
+            h3 {
+                margin-top: 30px;
+                margin-bottom: 10px;
+                font-weight: bold;
+                font-size: 1.2rem;
+
+                @mixin tac_h3_responsive($margin-top, $font_size) {
+                    margin-top: $margin-top;
+                    font-size: $font_size;
+                }
+
+                @include mobile-portrait { @include tac_h3_responsive(0, 1rem); text-align: center; }
+                @include mobile-landscape { @include tac_h3_responsive(0, 1rem); text-align: center; }
+                @include tablet-portrait { @include tac_h3_responsive(0, 1.1rem); }
+                @include tablet-landscape { @include tac_h3_responsive(0, 1.1rem); }
+            }
+
+            p {
+                font-size: 1.075rem;
+                line-height: 1.6rem;
+
+                @mixin tac_p_responsive($margin-top, $margin-bottom, $font_size) {
+                    margin-top: $margin-top;
+                    margin-bottom: $margin-bottom;
+                    font-size: $font_size;
+                }
+
+                @include mobile-portrait { @include tac_p_responsive(20px, 20px, 0.8rem); }
+                @include mobile-landscape { @include tac_p_responsive(20px, 20px, 0.8rem); }
+                @include tablet-portrait { @include tac_p_responsive(20px, 20px, 0.9rem); }
+                @include tablet-landscape { @include tac_p_responsive(20px, 20px, 1rem); }
+            }
+        }
+
+        br {
+            display: none;
+        }
+    }
+}

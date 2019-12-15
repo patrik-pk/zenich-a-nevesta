@@ -1,0 +1,701 @@
+
+$light_orange: #e4c3a7;
+$dark_orange: #bd926d;
+
+@font-face {
+    font-family: Raleway;
+    src: url("../../fonts/raleway_light.ttf");
+}
+
+/* Media queries */
+
+$mobile-landscape: 480px;
+$tablet-portrait: 768px;
+$tablet-landscape: 992px;
+$desktop: 1200px;
+
+@mixin mobile-portrait {
+    @media(max-width: #{$mobile-landscape}) {
+        @content;
+    }
+}
+
+@mixin mobile-landscape {
+    @media (min-width: #{$mobile-landscape}) and (max-width: #{$tablet-portrait}) {
+        @content;
+    }
+}
+
+@mixin tablet-portrait {
+    @media (min-width: #{$tablet-portrait}) and (max-width: #{$tablet-landscape}) {
+        @content;
+    }
+}
+
+@mixin tablet-landscape {
+    @media (min-width: #{$tablet-landscape}) and (max-width: #{$desktop}) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: #{$desktop}) {
+        @content;
+    }
+}
+
+/* Global */ 
+
+html {
+    overflow-x: hidden;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+
+    body {
+        width: 100vw!important;
+        overflow-x: hidden;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    button {
+        border: none;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+}
+
+/* Global (Header + Footer) */ 
+
+body {
+    /* Pop-up */
+
+    .pop-up {
+        position: fixed;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100vw;
+        height: 50px;
+        background: white;
+        z-index: 10;
+        bottom: 0;
+        border-top: 1px $dark_orange solid;
+
+        p {
+            max-width: 65%;
+            margin-left: 50px;
+            color: $dark_orange;
+            font-weight: bold;
+
+            @include mobile-portrait {
+                margin-left: 20px;
+                font-size: 12px;
+            }
+
+            @include mobile-landscape {
+                margin-left: 20px;
+                font-size: 12px;
+            }
+
+            @include tablet-portrait {
+                margin-left: 20px;
+            }
+
+            @include tablet-landscape {
+                margin-left: 20px;
+            }
+        }
+
+        button {
+            margin-right: 50px;
+            background: white;
+            width: 40px;
+            height: 30px;
+            cursor: pointer;
+            color: $dark_orange;
+            font-weight: bold;
+
+            @include mobile-portrait {
+                margin-right: 20px;
+                font-size: 12px;
+            }
+
+            @include mobile-landscape {
+                margin-right: 20px;
+                font-size: 12px;
+            }
+
+            @include tablet-portrait {
+                margin-right: 20px;
+            }
+
+            @include tablet-landscape {
+                margin-right: 20px;
+            }
+        }
+
+        button:hover {
+            @include desktop {
+                background: $dark_orange;
+                color: white;
+            }
+        }
+    }
+    
+    /* Header */
+
+    header {
+        position: relative;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-attachment: scroll;
+        background-size: 100%;
+
+        @include mobile-portrait {
+            background-size: cover;
+        }
+
+        @include mobile-landscape {
+            background-size: cover;
+        }
+    
+        .dark_overlay {
+            width: 100%;
+            min-height: inherit;
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+
+        .logo {
+            position: absolute;
+            top: 10px;
+            left: -10px;
+            min-height: 200px;
+            width: 200px;
+
+            @include mobile-portrait {
+                top: 20px;
+                left: 5px;
+                min-height: 120px;
+                width: 100px;
+            }
+
+            @include mobile-landscape {
+                top: 20px;
+                left: 5px;
+                min-height: 120px;
+                width: 120px;
+            }
+
+            @include tablet-portrait {
+                top: 20px;
+                left: 5px;
+                width: 140px;
+            }
+
+            @include tablet-landscape {
+                top: 20px;
+                left: 5px;
+                width: 140px;
+            }
+
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                cursor: pointer;
+            }
+        }
+
+        #nav_btn {
+            display: none;
+            position: absolute;
+            top: 35px;
+            right: 20px;
+            width: 26px;
+            height: 26px;
+            background-image: url("../../img/icons/menu.png");
+            background-size: cover;
+            cursor: pointer;
+
+            @include mobile-portrait {
+                display: block;
+                right: 20px;
+            }
+
+            @include mobile-landscape {
+                display: block;
+                right: 30px;
+            }
+
+            @include tablet-portrait {
+                display: block;
+                right: 30px;
+            }
+
+            @include tablet-landscape {
+                display: block;
+                right: 40px;
+            }
+        }
+
+        .navigation { 
+            
+            position: absolute;
+            top: 0px;
+            right: 30px;
+            min-height: 50px;
+
+            @mixin nav_responsive {
+                position: absolute;
+                top: 0;
+                right: -350px;
+                transition: all 200ms linear;
+            }
+
+            @include mobile-portrait { @include nav_responsive; }
+            @include mobile-landscape { @include nav_responsive; }
+            @include tablet-portrait { @include nav_responsive; }
+            @include tablet-landscape { @include nav_responsive; }
+
+            #nav_sidemenu {
+                display: none;
+                z-index: 10;
+                position: relative;
+                width: 350px;
+                height: 800px;
+                background: white;
+
+                @mixin nav_sidemenu_responsive {
+                    display: block;
+                    width: 300px;
+                }
+
+                @include mobile-portrait { @include nav_sidemenu_responsive; }
+                @include mobile-landscape { @include nav_sidemenu_responsive; }
+                @include tablet-portrait { @include nav_sidemenu_responsive; }
+                @include tablet-landscape { @include nav_sidemenu_responsive; }
+            }
+
+            #close_btn {
+                display: none;
+                position: absolute;
+                top: 25px;
+                right: 25px;
+                width: 16px;
+                height: 16px;
+                background-image: url("../../img/icons/close.png");
+                background-size: cover;
+                cursor: pointer;
+
+                @mixin close_btn_responsive($top, $right) {
+                    display: block;
+                    top: $top;
+                    right: $right;
+                }
+
+                @include mobile-portrait { @include close_btn_responsive(25px, 25px); }
+                @include mobile-landscape { @include close_btn_responsive(25px, 25px); }
+                @include tablet-portrait { @include close_btn_responsive(30px, 30px); }
+                @include tablet-landscape { @include close_btn_responsive(30px, 30px); }
+            }
+
+            hr {
+                display: none;
+                color: gray;
+
+                @mixin nav_hr_responsive { 
+                    display: block;
+                }
+
+                @include mobile-portrait { @include nav_hr_responsive; }
+                @include mobile-landscape { @include nav_hr_responsive; }
+                @include tablet-portrait { @include nav_hr_responsive; }
+                @include tablet-landscape { @include nav_hr_responsive; }
+            }
+
+            ul {
+
+                li {
+                    display: inline;
+                    padding: 0 10px;
+                    font-size: 1.1rem;
+
+                    a {
+                        display: inline-block;
+                        padding: 30px 10px;
+                        color: white;
+                        font-family: Raleway, Helvetica, sans-serif;
+                        letter-spacing: 1px;
+                        font-weight: bold;
+
+                        @mixin nav_links_responsive {
+                            display: block;
+                            padding: 10px 0;
+                            color: gray;
+                            font-size: 0.9rem;
+                            font-family: Raleway, Helvetica, sans-serif;
+                            letter-spacing: 1px;
+                            font-weight: normal;
+                            text-transform: uppercase;
+                        }
+
+                        @include mobile-portrait { @include nav_links_responsive; }
+                        @include mobile-landscape { @include nav_links_responsive; }
+                        @include tablet-portrait { @include nav_links_responsive; }
+                        @include tablet-landscape { @include nav_links_responsive; }
+                    }
+
+                    a:hover {
+                        @include desktop {
+                            text-shadow: 1px 0 0 white;
+                            transition: all 0.3s ease;
+                        }
+                    }
+
+                    @mixin nav_links_responsive_hover {
+                        display: block;
+                        width: 327px;
+                        font-size: 1rem;
+                    }
+
+                    @include mobile-portrait { @include nav_links_responsive_hover; }
+                    @include mobile-landscape { @include nav_links_responsive_hover; }
+                    @include tablet-portrait { @include nav_links_responsive_hover; }
+                    @include tablet-landscape { @include nav_links_responsive_hover; }
+                }
+
+                @mixin nav_li_responsive {
+                    position: absolute;
+                    top: 100px;
+                }
+
+                @include mobile-portrait { @include nav_li_responsive; }
+                @include mobile-landscape { @include nav_li_responsive; }
+                @include tablet-portrait { @include nav_li_responsive; }
+                @include tablet-landscape { @include nav_li_responsive; }
+            }
+        }
+
+        .navigation.active {
+            right: 0;
+        }
+
+        .title {
+            width: 100%;
+            position: absolute;
+            bottom: 60px;
+            left: 50%;
+            transform: translate(-50%, 0);
+
+            @mixin header_title_responsive {
+                bottom: 120px;
+            }
+
+            @include mobile-portrait { @include header_title_responsive; }
+            @include mobile-landscape { @include header_title_responsive; }
+            @include tablet-portrait { @include header_title_responsive; }
+            @include tablet-landscape { @include header_title_responsive; }
+
+            h1, p {
+                color: white;
+                text-align: center;
+            }
+
+            h1 {
+                font-weight: bold;
+                font-size: 4rem;
+
+                @include mobile-portrait {
+                    font-size: 2rem;
+                }
+
+                @include mobile-landscape {
+                    font-size: 2.2rem;
+                }
+
+                @include tablet-portrait {
+                    font-size: 2.5rem;
+                }
+
+                @include tablet-landscape {
+                    font-size: 3rem;
+                }
+            }
+
+            p {
+                font-weight: 300;
+                letter-spacing: 1px;
+                font-size: 1.4rem;
+                padding-top: 10px;
+                font-family: Raleway, Helvetica, sans-serif;
+
+                @include mobile-portrait {
+                    font-size: 0.8rem;
+                }
+
+                @include mobile-landscape {
+                    font-size: 1rem;
+                }
+
+                @include tablet-portrait {
+                    font-size: 1.1rem;
+                    padding-top: 5px;
+                }
+
+                @include tablet-landscape {
+                    font-size: 1.3rem;
+                    padding-top: 7px;
+                }
+            }
+        }
+    }
+
+    /* Secondary Header (All except Index) */
+
+    .secondary_header {
+        min-height: 300px;
+
+        .secondary_title {
+            position: absolute;
+            top: 150px;
+            left: 50%;
+            transform: translate(-50%, 0);
+
+            @mixin sec_title_responsive {
+                width: 100%;
+                top: 160px;
+            }
+
+            @include mobile-portrait { @include sec_title_responsive; }
+            @include mobile-landscape { @include sec_title_responsive; }
+            @include tablet-portrait { @include sec_title_responsive; }
+            @include tablet-landscape { @include sec_title_responsive; }
+
+            h1 {
+                color: white;
+                font-size: 4rem;
+                font-weight: 200;
+
+                @mixin sec_h1_responsive($font_size) {
+                    text-align: center;
+                    font-size: $font_size;
+                    color: white;
+                }
+
+                @include mobile-portrait { @include sec_h1_responsive(2rem); }
+                @include mobile-landscape { @include sec_h1_responsive(2.2rem); }
+                @include tablet-portrait { @include sec_h1_responsive(2.5rem); }
+                @include tablet-landscape { @include sec_h1_responsive(2.8rem); }
+            }
+        }
+    }
+
+    #services_header {
+        background-image: url("../../img/services/services.jpg");
+        background-position: center -400px;
+    }
+
+    #order_header {
+        background-image: url("../../img/order/order.jpg");
+        background-position: center -520px;
+    }
+
+    #about_header {
+        background-image: url("../../img/o_nas/o_nas.jpg");
+        background-position: center -200px;
+    }
+
+    #contact_header {
+        background-image: url("../../img/kontakt/kontakt.jpg");
+        background-position: center center;
+    }
+
+    #terms_and_conditions_header {
+        background-image: url("../../img/obchodni_podminky/obchodni_podminky.jpg");
+        background-position:  center -450px;
+    }
+
+    #services_header,
+    #order_header,
+    #about_header,
+    #contact_header,
+    #terms_and_conditions_header {
+
+        @mixin sec_bg_responsive {
+            background-size: cover;
+            background-position: center center;
+        }
+
+        @include mobile-portrait { @include sec_bg_responsive; }
+        @include mobile-landscape { @include sec_bg_responsive; }
+        @include tablet-portrait { @include sec_bg_responsive; }
+        @include tablet-landscape { @include sec_bg_responsive; }
+    }
+
+    /* Footer */
+
+    footer {
+        margin-top: 1px;
+        min-height: 400px;
+        background: black;
+        color: white;
+
+        .f_container {
+            display: flex;
+            flex-direction: column;
+            width: 80%;
+            min-height: inherit;
+            margin: auto;
+
+            .f_top {
+                position: relative;
+                display: flex;
+                width: 100%;
+                height: 140px;
+
+                @mixin ftop_responsive {
+                    height: 350px;
+                }
+
+                @include mobile-portrait { @include ftop_responsive; }
+                @include mobile-landscape { @include ftop_responsive; }
+                @include tablet-portrait { @include ftop_responsive; }
+                @include tablet-landscape { @include ftop_responsive; }
+
+                #f_content {
+                    width: 100%;
+                    z-index: 1;
+
+                    ul {
+                        display: flex;
+                        width: 100%;
+
+                        @mixin footer_ul_responsive {
+                            margin-top: 50px;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                        }
+
+                        @include mobile-portrait { @include footer_ul_responsive; }
+                        @include mobile-landscape { @include footer_ul_responsive; }
+                        @include tablet-portrait { @include footer_ul_responsive; }
+                        @include tablet-landscape { @include footer_ul_responsive; }
+
+                        li {
+                            display: flex;
+                            flex-direction: column;
+                            margin: 40px 245px 0 0;
+
+                            @mixin footer_li_responsive {
+                                margin: 0;
+                                text-align: center;
+                            }
+
+                            @include mobile-portrait { @include footer_li_responsive; }
+                            @include mobile-landscape { @include footer_li_responsive; }
+                            @include tablet-portrait { @include footer_li_responsive; }
+                            @include tablet-landscape { @include footer_li_responsive; }
+                            @media (min-width: 1200px) and (max-width: 1360px) {
+                                margin: 40px 205px 0 0!important;
+                            }
+
+                            a {
+                                margin: 4px 0;
+                                text-transform: uppercase;
+                                font-family: Raleway, Helvetica, sans-serif;
+                                font-weight: bold;
+                                font-size: 1rem;
+                                letter-spacing: 1px;
+                                color: white;
+
+                                @mixin footer_a_responsive {
+                                    margin: 7px 0;
+                                }
+
+                                @include mobile-portrait { @include footer_a_responsive; }
+                                @include mobile-landscape { @include footer_a_responsive; }
+                                @include tablet-portrait { @include footer_a_responsive; }
+                                @include tablet-landscape { @include footer_a_responsive; }
+                            }
+
+                            a:hover {
+                                @include desktop { text-decoration: underline; } 
+                            }
+                        }
+
+                        li:last-child {
+                            margin-right: 0;
+                        }
+                    }
+                }
+            }
+
+            .f_bottom {
+                position: relative;
+                height: 200px;
+
+                #f_line {
+                    width: 100%;
+                    position: absolute;
+
+                    hr {
+                        border: 0;
+                        height: 1px;
+                        background: white;
+
+                        @mixin footer_hr_responsive {
+                            margin-top: 10px;
+                        }
+
+                        @include mobile-portrait { @include footer_hr_responsive; }
+                        @include mobile-landscape { @include footer_hr_responsive; }
+                        @include tablet-portrait { @include footer_hr_responsive; }
+                        @include tablet-landscape { @include footer_hr_responsive; }
+                    }
+                }
+
+                #f_copyright {
+                    position: absolute;
+                    bottom: 40px;
+                    left: 50%;
+                    transform: translate(-50%, 0);
+
+                    @mixin footer_copyright_responsive {
+                        width: 100%;
+                    }
+
+                    @include mobile-portrait { @include footer_copyright_responsive; }
+                    @include mobile-landscape { @include footer_copyright_responsive; }
+                    @include tablet-portrait { @include footer_copyright_responsive; }
+                    @include tablet-landscape { @include footer_copyright_responsive; }
+
+                    p {
+                        font-family: Raleway, Helvetica, sans-serif;
+                        font-weight: bold;
+                        text-align: center;
+                    }
+
+                    p:nth-child(2) {
+                        font-size: 0.9rem;
+                    }
+                }
+            }
+        }
+
+
+    }
+}
+
+
+
