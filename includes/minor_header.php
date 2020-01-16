@@ -11,7 +11,7 @@
     <div id="nav_btn"></div>
 
     <div class="navigation">
-        <!-- <div id="nav_sidemenu"> TADY SE PRIDA SIDEMENU NA MOBILECH -->
+        <!-- <div id="nav_sidemenu"> nav_sidemenu goes here -->
         <div class="side_menu_container">
         <div id="close_btn"></div>
 

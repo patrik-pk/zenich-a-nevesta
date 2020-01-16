@@ -1409,14 +1409,9 @@ body footer .f_container .f_bottom #f_copyright p:nth-child(2) {
   border: 2px #bd926d solid;
   -o-object-fit: cover;
      object-fit: cover;
-  /*@include tablet-landscape {
-                            height: 400px;
-                        }*/
 }
 
 .services .menu_section #menu_ul #menu_li, .services .ceremony_section #ceremony_ul #ceremony_li, .services .photo_section #photo_ul #photo_li, .services .offer_section #offer_ul #offer_li {
-  /*width: 60%;
-        margin: 75px;*/
   width: 65%;
   margin: 75px 0;
 }

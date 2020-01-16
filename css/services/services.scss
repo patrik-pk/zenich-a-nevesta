@@ -200,10 +200,6 @@
                         height: 450px;
                         border: 2px $dark_orange solid;
                         object-fit: cover;
-
-                        /*@include tablet-landscape {
-                            height: 400px;
-                        }*/
                     }
                 }
             }
@@ -213,8 +209,6 @@
     /* ALL SECTIONS EXCEPT LOCATIONS */
 
     .menu_section #menu_ul #menu_li, .ceremony_section #ceremony_ul #ceremony_li, .photo_section #photo_ul #photo_li, .offer_section #offer_ul #offer_li {
-        /*width: 60%;
-        margin: 75px;*/
         width: 65%;
         margin: 75px 0;
 

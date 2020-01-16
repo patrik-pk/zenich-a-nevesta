@@ -7,7 +7,6 @@ $(document).ready(function() {
     
     // FIX NAVBAR POSITION ON TOP OF THE PAGE WHEN USER SCROLLS DOWN
     
-    
     $(window).scroll(function(){
     
       var a = 200;
