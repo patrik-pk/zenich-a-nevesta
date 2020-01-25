@@ -49,7 +49,7 @@
         $contact = $_POST["contact"];
         $message = $_POST["message"];
 
-        $my_email = "postmaster@zenichanevesta.cz";
+        $my_email = "patrik.pukanec@gmail.com";
         $subject = "ZaN - Zprava";
         $email_body = "Od: ".$name." \r\n Kontakt: ".$contact." \r\n \r\n ".$message."";
 
