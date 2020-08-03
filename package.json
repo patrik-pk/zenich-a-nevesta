@@ -1,0 +1,19 @@
+{
+  "name": "patrikpk-zan",
+  "version": "1.0.0",
+  "description": "![Showcase](https://github.com/patrikPu/patrikp_zan/blob/master/showcase.jpg)",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/patrikPu/patrikp_zan.git"
+  },
+  "author": "patrik_pk",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/patrikPu/patrikp_zan/issues"
+  },
+  "homepage": "https://github.com/patrikPu/patrikp_zan#readme"
+}
