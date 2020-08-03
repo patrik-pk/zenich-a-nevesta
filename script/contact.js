@@ -1,17 +1,4 @@
 
-/*$(document).ready(function() {
-    function messageSent() {
-        let messageConfirmation = $("#message_confirmation");
-    
-        messageConfirmation.show();
-        messageConfirmation.delay(10000).fadeOut(10000);
-    }
-
-    $("#submit_btn").on("click", function() {
-        messageSent();
-    });
-});*/
-
 $(document).ready(function() {
     // Form On Submit
     $(".contact_form").submit(function (e) {
