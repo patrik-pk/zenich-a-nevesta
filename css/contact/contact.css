@@ -1288,6 +1288,10 @@ body footer .f_container .f_bottom #f_copyright p:nth-child(2) {
   }
 }
 
+.contact .contact_section .message_container .form_message {
+  margin-top: 10px;
+}
+
 .contact .contact_section .message_container #message_confirmation {
   display: none;
   position: absolute;
