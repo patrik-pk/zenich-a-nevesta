@@ -20,7 +20,36 @@
 
     <!-- HEADER -->
 
-    <?php $header_id = "contact_header"; $minor_heading = "Kontaktujte nás"; include './includes/minor_header.php'; ?>
+    <header class="secondary_header" id="contact_header">
+
+        <div class="dark_overlay"></div>
+
+        <div class="logo" onclick="location.href='index.html';"><img src="./img/logo.png" alt=""></div>
+
+        <div id="nav_btn"></div>
+
+        <div class="navigation">
+            <!-- <div id="nav_sidemenu"> nav_sidemenu goes here -->
+            <div class="side_menu_container">
+            <div id="close_btn"></div>
+
+                <ul>
+                    <li><a href="index.html">Úvod</a><hr></li>
+                    <li><a href="sluzby.html">Služby</a><hr></li>
+                    <li><a href="objednavka.html">Objednávka</a><hr></li>
+                    <li><a href="o_nas.html">O nás</a><hr></li>
+                    <li><a href="kontakt.html">Kontakt</a><hr></li>
+                    <li><a href="obchodni_podminky.html">Obchodní podmínky</a><hr></li>
+                </ul>
+            </div>
+            <!-- </div> -->
+        </div>
+
+        <div class="secondary_title">
+            <h1>Kontaktujte nás</h1>
+        </div>
+
+    </header>
 
     <!-- SECTION -->
 
@@ -28,7 +57,7 @@
       <div class="message_container">
         <h2 class="contact_h2">Zanechte nám zprávu!</h2>
 
-        <form class="" action="kontakt.php" method="POST">
+        <form class="" action="" method="POST">
           Jméno <br>
           <input type="text" name="name" value="" required> <br>
           Tel. číslo / E-mail <br>
@@ -41,7 +70,7 @@
         <p id="message_confirmation">Zpráva byla odeslána.</p>
       </div>
 
-      <?php 
+      <!--
 
       if(isset($_POST['submit'])) {
 
@@ -57,8 +86,7 @@
         //echo '<script>console.log("' .$email_body. '")</script>';
 
       }
-          
-      ?>
+      -->
 
       <hr>
 
@@ -73,7 +101,45 @@
 
     <!-- FOOTER -->
 
-    <?php include './includes/footer.php'; ?>
+    <footer>
+        <div class="f_container">
+            <div class="f_top">
+                <div id="f_content">
+                    <ul>
+                        <li>
+                            <a href="index.html">Úvod</a>
+                        </li>
+
+                        <li>
+                            <a href="sluzby.html">Služby</a>
+                            <a href="objednavka.html">Objednávka</a>
+                        </li>
+
+                        <li>
+                            <a href="o_nas.html">O nás</a>
+                            <a href="kontakt.html">Kontakt</a>
+                        </li>
+
+                        <li>
+                            <a href="obchodni_podminky.html">Obchodní podmínky</a>
+                            <a href="https://instagram.com" target="_blank">Instagram</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="f_bottom">
+                <div id="f_line">
+                    <hr>
+                </div>
+
+                <div id="f_copyright">
+                    <p>Ženich & Nevěsta &copy; 2019.</p>
+                    <p>Všechna práva vyhrazena.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="./script/jquery.cookie.js"></script>
